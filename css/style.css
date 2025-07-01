@@ -1,0 +1,658 @@
+/* Global Styles */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --success-color: #28a745;
+    --white: #ffffff;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+.btn-login {
+    padding: 8px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #3a5bef;
+    color: var(--white);
+}
+
+/* Hero Section Styles */
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero {
+    padding: 180px 0 80px;
+    background: linear-gradient(135deg, #f5f7ff 0%, #e8ecff 100%);
+}
+
+.hero-content {
+    /* max-width: 500px; */
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #3a5bef;
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #f0f3ff;
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.hero-image {
+    /* position: absolute;
+    right: 0;
+    top: 150px;
+    width: 50%; */
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.how-it-works h3 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--dark-color);
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.step {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background-color: #e8ecff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.step h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.step p {
+    color: var(--secondary-color);
+}
+
+/* Footer Styles */
+.footer {
+    padding: 20px 0;
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+}
+
+/* Login Selection Modal */
+.login-selection-page {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-selection-container {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    text-align: center;
+}
+
+.close-login {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.close-login:hover {
+    color: var(--dark-color);
+}
+
+.login-selection-container h2 {
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.login-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.login-option {
+    flex: 1;
+    padding: 30px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid #eee;
+}
+
+.login-option:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+}
+
+.login-option.business:hover {
+    border-color: var(--primary-color);
+}
+
+.login-option.ca:hover {
+    border-color: var(--success-color);
+}
+
+.login-option-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-option.business .login-option-icon {
+    background-color: #e8ecff;
+}
+
+.login-option.ca .login-option-icon {
+    background-color: #e2f0e5;
+}
+
+.login-option-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.login-option h3 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.login-option p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .hero-image {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        margin-top: 40px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .steps {
+        flex-direction: column;
+    }
+    
+    .login-options {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 150px 0 60px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+}
+
+/* shared styling of login-business and login-ca */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7ff 0%, #e8ecff 100%);
+    padding: 20px;
+}
+
+.login-box {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.login-box h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* will style logo for both request form and ca dashboard
+.form-logo-container {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.form-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: -20px;
+    margin-left: 10px;
+} */
+
+/* Ensure header is fixed in request form and ca dashboard*/
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+/* Layout fix: footer sticks to bottom (request form and ca dashboard)*/
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Optional: improve footer appearance */
+.footer {
+    padding: 20px 0;
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+}
+
+/* styling for request-form */
+.request-page-bg {
+    background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+}
+
+.page-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* .form-container {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+} */
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label.required::after {
+    content: " *";
+    color: red;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+/* .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+} */
+
+.form-group textarea {
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    background-color: #fff;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3a5bef;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+}
+
+/* styling for CA dashboard */
+
+.dashboard-page {
+    margin-top: 140px;
+    margin-bottom: 60px;
+}
+
+.dashboard-heading {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.table-container {
+    overflow-x: auto;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+
+.request-table thead {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.request-table th,
+.request-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Main takes up remaining space */
+.page-layout main {
+    flex: 1;
+    margin-top: 120px; /* space for fixed header */
+    margin-bottom: 40px;
+}

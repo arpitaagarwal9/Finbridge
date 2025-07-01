@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CA Dashboard - FinBridge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon for all screen resolutions -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-192x192.png">
+
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="page-layout">
+  <header class="header">
+    <div class="container">
+      <div class="logo-container">
+        <img src="images/logo.png" alt="FinBridge Logo" class="logo-img" />
+        <h1 class="logo-text">FinBridge</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="welcome.html">Home</a>
+        <a href="#" class="btn-login">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container dashboard-page">
+    <h2 class="dashboard-heading">Business Service Requests</h2>
+
+    <div class="table-container">
+      <table class="request-table">
+        <thead>
+          <tr>
+            <th>Firm Name</th>
+            <th>Entity Type</th>
+            <th>Turnover</th>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Start Date</th>
+            <th>Duration</th>
+            <th>Budget</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody id="requestTableBody">
+          <!-- Data rows injected via script.js or inline JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 FinBridge. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
